@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Image Gallery</title>
+    <title>Stylish Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Personal Image Gallery</h1>
+    <h1>Stylish Image Gallery</h1>
     <form id="uploadForm">
-        <input type="file" id="fileInput" accept="image/*" multiple>
-        <button type="submit">Upload</button>
+        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+        <button type="button" id="uploadButton">Upload Images</button>
+        <div id="dropZone">or drag & drop images here</div>
     </form>
     <div class="gallery" id="gallery"></div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <script src="script.js"></script>
 </body>
