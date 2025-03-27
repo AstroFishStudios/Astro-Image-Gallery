@@ -1,18 +1,51 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 form {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#dropZone {
+    margin-top: 10px;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    color: #007bff;
+    cursor: pointer;
 }
 
 .gallery {
@@ -21,12 +54,12 @@ form {
     gap: 10px;
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
 }
 
 .gallery-item {
     overflow: hidden;
     border-radius: 8px;
+    position: relative;
 }
 
 .gallery-item img {
@@ -39,4 +72,41 @@ form {
 
 .gallery-item img:hover {
     transform: scale(1.05);
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
