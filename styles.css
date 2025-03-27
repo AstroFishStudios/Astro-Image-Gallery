@@ -60,6 +60,8 @@ button:hover {
     overflow: hidden;
     border-radius: 8px;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img {
@@ -73,6 +75,11 @@ button:hover {
 .gallery-item img:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .modal {
@@ -92,6 +99,7 @@ button:hover {
     display: block;
     width: 80%;
     max-width: 700px;
+    border-radius: 10px;
 }
 
 .close {
